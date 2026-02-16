@@ -4,97 +4,153 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Judge's Corner - NATRC Region 1</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        /* judges page styles */
+        .intro-box {
+            background: linear-gradient(135deg, #e7f3ff 0%, #f0f8ff 100%);
+            border: 2px solid #2554C7;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
         }
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f5f5f5;
+        .intro-box h3 {
+            color: #2554C7;
+            margin-bottom: 0.75rem;
         }
 
-        header {
-            background: linear-gradient(135deg, #4a7c3f 0%, #5a8c4f 100%);
-            color: white;
-            padding: 1rem;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-
-        .header-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo h1 {
-            font-size: 1.5rem;
-            font-weight: 700;
-        }
-
-        .logo p {
-            font-size: 0.9rem;
-            opacity: 0.9;
-        }
-
-        .menu-toggle {
-            display: none;
-            background: none;
-            border: none;
-            color: white;
-            font-size: 1.5rem;
-            cursor: pointer;
-            padding: 0.5rem;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 1.5rem;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            transition: opacity 0.3s;
-            padding: 0.5rem;
-        }
-
-        nav a:hover {
-            opacity: 0.8;
-        }
-
-        main {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 1rem;
-        }
-
-        .page-header {
+        .article {
             background: white;
             padding: 2rem;
             margin-bottom: 2rem;
             border-radius: 8px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            text-align: center;
+            border-left: 5px solid #4a7c3f;
         }
 
-        .page-header h1 {
+        .article-header {
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .article h2 {
             color: #4a7c3f;
-            font-size: 2rem;
+            font-size: 1.5rem;
             margin-bottom: 0.5rem;
         }
 
+        .article-meta {
+            color: #666;
+            font-size: 0.9rem;
+            font-style: italic;
+        }
+
+        .article p {
+            margin-bottom: 1rem;
+        }
+
+        .article ul, .article ol {
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .article li {
+            margin-bottom: 0.5rem;
+        }
+
+        .tip-box {
+            background: #fff8dc;
+            border-left: 4px solid #ffc107;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 4px;
+        }
+
+        .tip-box h4 {
+            color: #856404;
+            margin-bottom: 0.5rem;
+        }
+
+        .judge-profile {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .judge-card {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 6px;
+            text-align: center;
+        }
+
+        .judge-card h4 {
+            color: #4a7c3f;
+            margin-bottom: 0.5rem;
+        }
+
+        .judge-card .role {
+            color: #666;
+            font-size: 0.9rem;
+            font-style: italic;
+            margin-bottom: 0.75rem;
+        }
+
+        .judge-card a {
+            color: #2554C7;
+            text-decoration: none;
+        }
+
+        .qa-section {
+            background: white;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .qa-section h3 {
+            color: #4a7c3f;
+            margin-bottom: 1rem;
+        }
+
+        .qa-item {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .qa-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .question {
+            font-weight: 600;
+            color: #2554C7;
+            margin-bottom: 0.5rem;
+        }
+
+        .answer {
+            color: #333;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
         .intro-box {
             background: linear-gradient(135deg, #e7f3ff 0%, #f0f8ff 100%);
             border: 2px solid #2554C7;
@@ -241,41 +297,6 @@
         }
 
         @media (max-width: 768px) {
-            .menu-toggle {
-                display: block;
-            }
-
-            nav {
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                background-color: #4a7c3f;
-                max-height: 0;
-                overflow: hidden;
-                transition: max-height 0.3s ease-out;
-            }
-
-            nav.active {
-                max-height: 500px;
-            }
-
-            nav ul {
-                flex-direction: column;
-                gap: 0;
-                padding: 1rem;
-            }
-
-            nav a {
-                display: block;
-                padding: 1rem;
-                border-bottom: 1px solid rgba(255,255,255,0.1);
-            }
-
-            .logo h1 {
-                font-size: 1.2rem;
-            }
-
             .page-header, .article, .intro-box {
                 padding: 1.5rem 1rem;
             }
