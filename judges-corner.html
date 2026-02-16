@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Judge's Corner - NATRC Region 1</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            background: linear-gradient(135deg, #4a7c3f 0%, #5a8c4f 100%);
+            color: white;
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .logo p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s;
+            padding: 0.5rem;
+        }
+
+        nav a:hover {
+            opacity: 0.8;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+
+        .page-header {
+            background: white;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .page-header h1 {
+            color: #4a7c3f;
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .intro-box {
+            background: linear-gradient(135deg, #e7f3ff 0%, #f0f8ff 100%);
+            border: 2px solid #2554C7;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+
+        .intro-box h3 {
+            color: #2554C7;
+            margin-bottom: 0.75rem;
+        }
+
+        .article {
+            background: white;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-left: 5px solid #4a7c3f;
+        }
+
+        .article-header {
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .article h2 {
+            color: #4a7c3f;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .article-meta {
+            color: #666;
+            font-size: 0.9rem;
+            font-style: italic;
+        }
+
+        .article p {
+            margin-bottom: 1rem;
+        }
+
+        .article ul, .article ol {
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .article li {
+            margin-bottom: 0.5rem;
+        }
+
+        .tip-box {
+            background: #fff8dc;
+            border-left: 4px solid #ffc107;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 4px;
+        }
+
+        .tip-box h4 {
+            color: #856404;
+            margin-bottom: 0.5rem;
+        }
+
+        .judge-profile {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .judge-card {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 6px;
+            text-align: center;
+        }
+
+        .judge-card h4 {
+            color: #4a7c3f;
+            margin-bottom: 0.5rem;
+        }
+
+        .judge-card .role {
+            color: #666;
+            font-size: 0.9rem;
+            font-style: italic;
+            margin-bottom: 0.75rem;
+        }
+
+        .judge-card a {
+            color: #2554C7;
+            text-decoration: none;
+        }
+
+        .qa-section {
+            background: white;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .qa-section h3 {
+            color: #4a7c3f;
+            margin-bottom: 1rem;
+        }
+
+        .qa-item {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .qa-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .question {
+            font-weight: 600;
+            color: #2554C7;
+            margin-bottom: 0.5rem;
+        }
+
+        .answer {
+            color: #333;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+
+            nav {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background-color: #4a7c3f;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease-out;
+            }
+
+            nav.active {
+                max-height: 500px;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 0;
+                padding: 1rem;
+            }
+
+            nav a {
+                display: block;
+                padding: 1rem;
+                border-bottom: 1px solid rgba(255,255,255,0.1);
+            }
+
+            .logo h1 {
+                font-size: 1.2rem;
+            }
+
+            .page-header, .article, .intro-box {
+                padding: 1.5rem 1rem;
+            }
+
+            .page-header h1 {
+                font-size: 1.5rem;
+            }
+
+            .judge-profile {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <h1>NATRC Region 1</h1>
+                <p>Judge's Corner</p>
+            </div>
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle menu">☰</button>
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="natrc-region1-mobile.html">Home</a></li>
+                    <li><a href="ride-schedule.html">Ride Schedule</a></li>
+                    <li><a href="stories-articles.html">Stories & Articles</a></li>
+                    <li><a href="judges-corner.html">Judge's Corner</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#links">Links</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="page-header">
+            <h1>⚖️ Judge's Corner</h1>
+            <p>Insights, explanations, and guidance from our experienced Region 1 judges</p>
+        </div>
+
+        <div class="intro-box">
+            <h3>Welcome to Judge's Corner!</h3>
+            <p>This is your opportunity to learn directly from our Region 1 judges. Here we explain mystery rules, answer questions you forgot to ask at rides, discuss concerns about current horse and horsemanship trends, offer praise, and generally share expertise to help you better care for your mount and improve your skills.</p>
+            <p style="margin-top: 0.75rem;"><strong>Have a question for our judges?</strong> Send it to <a href="mailto:R1leadline@gmail.com" style="color: #2554C7;">R1leadline@gmail.com</a></p>
+        </div>
+
+        <!-- Featured Article -->
+        <article class="article">
+            <div class="article-header">
+                <h2>Understanding Maneuvering Trail/Behavior Scoring</h2>
+                <div class="article-meta">By Region 1 Judges | Updated for 2025 Rules</div>
+            </div>
+            
+            <p>One of the most common questions we receive is about how the Maneuvering Trail/Behavior (MT/B) category is scored. With the 2025 rule changes, we want to clarify how this works.</p>
+
+            <h3 style="color: #2554C7; margin-top: 1.5rem;">What is MT/B?</h3>
+            <p>Maneuvering Trail/Behavior evaluates your horse's disposition, response to the rider, and general behavior on the trail. This includes (but is not limited to):</p>
+            <ul>
+                <li>Kicking or threatening to kick</li>
+                <li>Head tossing or resistance</li>
+                <li>Prancing or excessive energy</li>
+                <li>Standing quietly for examination and mounting</li>
+                <li>Buddying up (excessive attachment to other horses)</li>
+                <li>Trail sense and willingness</li>
+            </ul>
+
+            <div class="tip-box">
+                <h4>💡 Judge's Tip</h4>
+                <p>The new scoring guidelines focus more on actual behavior rather than stacked deductions for multi-part obstacles. Riders are seeing more reasonable scores that better reflect their horse's overall demeanor.</p>
+            </div>
+
+            <h3 style="color: #2554C7; margin-top: 1.5rem;">Common Scenarios</h3>
+            <p><strong>Scenario 1: The Buddy-Sour Horse</strong><br>
+            If your horse becomes anxious when separated from other horses, this will be noted. The severity of the deduction depends on the extent of the behavior - mild calling vs. dangerous behavior.</p>
+
+            <p><strong>Scenario 2: Head Tossing</strong><br>
+            Occasional head tossing due to flies is normal and won't be penalized. Persistent head tossing indicating resistance or discomfort will result in deductions.</p>
+
+            <p><strong>Scenario 3: Spooking</strong><br>
+            A horse that spooks but quickly recovers and continues calmly will receive minimal deductions. A horse that spooks repeatedly or dangerously will lose more points.</p>
+
+            <h3 style="color: #2554C7; margin-top: 1.5rem;">How to Improve Your MT/B Score</h3>
+            <ol>
+                <li><strong>Desensitization training</strong> - Expose your horse to various obstacles at home</li>
+                <li><strong>Confidence building</strong> - Work on independence from other horses</li>
+                <li><strong>Consistent handling</strong> - Maintain the same expectations on and off the trail</li>
+                <li><strong>Proper conditioning</strong> - A well-conditioned horse is a calmer horse</li>
+                <li><strong>Stay calm yourself</strong> - Your horse reads your emotions</li>
+            </ol>
+        </article>
+
+        <!-- Q&A Section -->
+        <div class="qa-section">
+            <h3>📋 Common Questions Answered</h3>
+
+            <div class="qa-item">
+                <div class="question">Q: Why was my horse marked down for soundness when I didn't notice any lameness?</div>
+                <div class="answer">A: Judges are trained to detect subtle gait irregularities that riders often miss, especially when aboard the horse. These early indicators help prevent more serious injuries. Ask the judge for specific feedback - they're happy to explain what they observed and how to address it.</div>
+            </div>
+
+            <div class="qa-item">
+                <div class="question">Q: Can I ask judges questions during the ride?</div>
+                <div class="answer">A: Absolutely! While judges can't give you specific scoring information during competition, they're happy to answer general questions about technique, obstacles, or horse care. Save detailed discussion of your scores for after the ride when judges can review your scorecard with you.</div>
+            </div>
+
+            <div class="qa-item">
+                <div class="question">Q: How can I learn more about what judges are looking for?</div>
+                <div class="answer">A: Attend a NATRC clinic! These hands-on events let you work directly with judges, practice obstacles, and get immediate feedback. Also review the judging criteria in the NATRC Rule Book and consider volunteering as a judge's secretary to see the process firsthand.</div>
+            </div>
+
+            <div class="qa-item">
+                <div class="question">Q: What should I do if I disagree with my score?</div>
+                <div class="answer">A: First, review your scorecard carefully and note the specific comments. Then approach the judge calmly and ask for clarification. Most "disagreements" are simply misunderstandings that judges are happy to explain. Remember, judges want you to succeed and improve!</div>
+            </div>
+
+            <div class="qa-item">
+                <div class="question">Q: How are obstacles judged differently across divisions?</div>
+                <div class="answer">A: Open division horses are expected to handle obstacles smoothly with minimal guidance. Novice horses are given more leeway for hesitation or requiring more direction. Leisure division doesn't focus on obstacles in the same way. The key is improvement over time - judges love seeing progression!</div>
+            </div>
+        </div>
+
+        <!-- Recent Topics -->
+        <article class="article">
+            <div class="article-header">
+                <h2>Proper Hydration and Electrolytes</h2>
+                <div class="article-meta">By Dr. Carol Ormond, Region 1 Veterinary Judge</div>
+            </div>
+
+            <p>With summer riding season approaching, let's discuss one of the most important aspects of horse care: hydration and electrolyte management.</p>
+
+            <p><strong>The Basics:</strong> Horses lose significant amounts of water and electrolytes through sweat during exercise. On a typical CTR ride, especially in warm weather, your horse needs to replace these losses to maintain optimal performance and health.</p>
+
+            <div class="tip-box">
+                <h4>💡 Judge's Observation</h4>
+                <p>We often see horses at vet checks that are mildly dehydrated because riders didn't offer water frequently enough or the horse is a picky drinker. Prevention is key!</p>
+            </div>
+
+            <p><strong>Hydration Tips:</strong></p>
+            <ul>
+                <li>Offer water at every opportunity during the ride</li>
+                <li>Train your horse to drink from various sources (buckets, streams, troughs)</li>
+                <li>Consider adding a flavoring agent your horse likes to unfamiliar water</li>
+                <li>Monitor skin tenting and gum moisture at rest stops</li>
+                <li>Allow adequate time for drinking - don't rush</li>
+            </ul>
+
+            <p><strong>Electrolyte Guidelines:</strong></p>
+            <ul>
+                <li>Consult with your veterinarian about appropriate products and dosing</li>
+                <li>Start supplementing during training rides, not just at competitions</li>
+                <li>Most horses benefit from electrolytes on rides over 2 hours</li>
+                <li>Timing matters - offer after the horse has had a chance to drink</li>
+                <li>Watch for signs of imbalance: muscle twitching, excessive fatigue, or "thumps"</li>
+            </ul>
+
+            <p>Remember: Every horse is different. What works for one may not work for another. Pay attention to your individual horse's needs and consult with your veterinarian and experienced riders.</p>
+        </article>
+
+        <!-- Meet Our Judges -->
+        <div class="qa-section">
+            <h3>👥 Meet Region 1 Judges</h3>
+            <p>Our experienced judges are here to help you succeed. Don't hesitate to ask questions!</p>
+
+            <div class="judge-profile">
+                <div class="judge-card">
+                    <h4>Dr. Carol Ormond</h4>
+                    <div class="role">Veterinary Judge</div>
+                    <p>Experienced equine veterinarian and long-time NATRC member</p>
+                </div>
+
+                <div class="judge-card">
+                    <h4>Jamie Dieterich</h4>
+                    <div class="role">Horsemanship Judge</div>
+                    <p>Multiple national championships and decades of CTR experience</p>
+                </div>
+
+                <div class="judge-card">
+                    <h4>Angie Meroshnekoff</h4>
+                    <div class="role">Horsemanship Judge & Leisure Judge</div>
+                    <p>40+ years as competitor, judge, ride manager, and mentor</p>
+                </div>
+
+                <div class="judge-card">
+                    <h4>Bev Roberts</h4>
+                    <div class="role">Horsemanship Judge</div>
+                    <p>National championship judge and dedicated supporter of NATRC</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Submit Questions -->
+        <div class="intro-box">
+            <h3>📧 Submit Your Questions</h3>
+            <p>Have a judging question you'd like answered in a future Judge's Corner article? We'd love to hear from you!</p>
+            <p style="margin-top: 0.75rem;">Send your questions to: <a href="mailto:R1leadline@gmail.com" style="color: #2554C7; font-weight: 600;">R1leadline@gmail.com</a></p>
+            <p style="margin-top: 0.5rem; font-size: 0.9rem; color: #666;">Questions may be edited for clarity and will be answered in upcoming issues or on this page.</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 NATRC Region 1 | <a href="natrc-region1-mobile.html">Home</a> | <a href="contact.html">Contact</a></p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.getElementById('mainNav');
+            nav.classList.toggle('active');
+        }
+
+        document.addEventListener('click', function(event) {
+            const nav = document.getElementById('mainNav');
+            const toggle = document.querySelector('.menu-toggle');
+            
+            if (!nav.contains(event.target) && !toggle.contains(event.target)) {
+                nav.classList.remove('active');
+            }
+        });
+
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768) {
+                document.getElementById('mainNav').classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
