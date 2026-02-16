@@ -5,324 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ride Schedule - NATRC Region 1</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        /* ride schedule styles */
-        .page-header p {
-            color: #666;
-            font-size: 1.1rem;
-        }
-
-        .ride-card {
-            background: white;
-            padding: 1.5rem;
-            margin-bottom: 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            border-left: 5px solid #4a7c3f;
-        }
-
-        .ride-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 1rem;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
-
-        .ride-title {
-            flex: 1;
-        }
-
-        .ride-title h3 {
-            color: #4a7c3f;
-            font-size: 1.3rem;
-            margin-bottom: 0.25rem;
-        }
-
-        .ride-date {
-            color: #666;
-            font-size: 0.95rem;
-        }
-
-        .ride-status {
-            background-color: #ffc107;
-            color: #856404;
-            padding: 0.25rem 0.75rem;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            white-space: nowrap;
-        }
-
-        .ride-status.confirmed {
-            background-color: #28a745;
-            color: white;
-        }
-
-        .ride-details {
-            display: grid;
-            gap: 0.75rem;
-            margin-bottom: 1rem;
-        }
-
-        .detail-row {
-            display: flex;
-            gap: 0.5rem;
-        }
-
-        .detail-label {
-            font-weight: 600;
-            color: #555;
-            min-width: 100px;
-        }
-
-        .detail-value {
-            color: #333;
-        }
-
-        .contact-info {
-            background-color: #f8f9fa;
-            padding: 1rem;
-            border-radius: 4px;
-            margin-top: 1rem;
-        }
-
-        .contact-info h4 {
-            color: #4a7c3f;
-            margin-bottom: 0.5rem;
-            font-size: 1rem;
-        }
-
-        .contact-item {
-            margin: 0.5rem 0;
-            font-size: 0.95rem;
-        }
-
-        .contact-item strong {
-            color: #555;
-        }
-
-        .contact-item a {
-            color: #2554C7;
-            text-decoration: none;
-        }
-
-        .contact-item a:hover {
-            text-decoration: underline;
-        }
-
-        .btn-primary {
-            display: inline-block;
-            background-color: #4a7c3f;
-            color: white;
-            padding: 0.5rem 1rem;
-            text-decoration: none;
-            border-radius: 4px;
-            font-weight: 600;
-            transition: background-color 0.3s;
-            margin-top: 0.5rem;
-        }
-
-        .btn-primary:hover {
-            background-color: #3d6633;
-        }
-
-        .info-box {
-            background-color: #e7f3ff;
-            border-left: 4px solid #2554C7;
-            padding: 1rem;
-            margin: 2rem 0;
-            border-radius: 4px;
-        }
-
-        .info-box h3 {
-            color: #2554C7;
-            margin-bottom: 0.5rem;
-        }
-
-        footer {
-            background-color: #333;
-            color: white;
-            padding: 1rem;
-            text-align: center;
-            margin-top: 3rem;
-        }
-
-        footer a {
-            color: white;
-            text-decoration: none;
-        }
-        .page-header p {
-            color: #666;
-            font-size: 1.1rem;
-        }
-
-        .ride-card {
-            background: white;
-            padding: 1.5rem;
-            margin-bottom: 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            border-left: 5px solid #4a7c3f;
-        }
-
-        .ride-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 1rem;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
-
-        .ride-title {
-            flex: 1;
-        }
-
-        .ride-title h3 {
-            color: #4a7c3f;
-            font-size: 1.3rem;
-            margin-bottom: 0.25rem;
-        }
-
-        .ride-date {
-            color: #666;
-            font-size: 0.95rem;
-        }
-
-        .ride-status {
-            background-color: #ffc107;
-            color: #856404;
-            padding: 0.25rem 0.75rem;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            white-space: nowrap;
-        }
-
-        .ride-status.confirmed {
-            background-color: #28a745;
-            color: white;
-        }
-
-        .ride-details {
-            display: grid;
-            gap: 0.75rem;
-            margin-bottom: 1rem;
-        }
-
-        .detail-row {
-            display: flex;
-            gap: 0.5rem;
-        }
-
-        .detail-label {
-            font-weight: 600;
-            color: #555;
-            min-width: 100px;
-        }
-
-        .detail-value {
-            color: #333;
-        }
-
-        .contact-info {
-            background-color: #f8f9fa;
-            padding: 1rem;
-            border-radius: 4px;
-            margin-top: 1rem;
-        }
-
-        .contact-info h4 {
-            color: #4a7c3f;
-            margin-bottom: 0.5rem;
-            font-size: 1rem;
-        }
-
-        .contact-item {
-            margin: 0.5rem 0;
-            font-size: 0.95rem;
-        }
-
-        .contact-item strong {
-            color: #555;
-        }
-
-        .contact-item a {
-            color: #2554C7;
-            text-decoration: none;
-        }
-
-        .contact-item a:hover {
-            text-decoration: underline;
-        }
-
-        .btn-primary {
-            display: inline-block;
-            background-color: #4a7c3f;
-            color: white;
-            padding: 0.5rem 1rem;
-            text-decoration: none;
-            border-radius: 4px;
-            font-weight: 600;
-            transition: background-color 0.3s;
-            margin-top: 0.5rem;
-        }
-
-        .btn-primary:hover {
-            background-color: #3d6633;
-        }
-
-        .info-box {
-            background-color: #e7f3ff;
-            border-left: 4px solid #2554C7;
-            padding: 1rem;
-            margin: 2rem 0;
-            border-radius: 4px;
-        }
-
-        .info-box h3 {
-            color: #2554C7;
-            margin-bottom: 0.5rem;
-        }
-
-        footer {
-            background-color: #333;
-            color: white;
-            padding: 1rem;
-            text-align: center;
-            margin-top: 3rem;
-        }
-
-        footer a {
-            color: white;
-            text-decoration: none;
-        }
-
-        @media (max-width: 768px) {
-            .page-header {
-                padding: 1.5rem 1rem;
-            }
-
-            .page-header h1 {
-                font-size: 1.5rem;
-            }
-
-            .ride-card {
-                padding: 1rem;
-            }
-
-            .detail-row {
-                flex-direction: column;
-                gap: 0.25rem;
-            }
-
-            .detail-label {
-                min-width: auto;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="css/ride-schedule.css">
 </head>
 <body>
     <header>
@@ -391,8 +74,8 @@
                     <strong>Phone:</strong> <a href="tel:5303082450">(530) 308-2450</a>
                 </div>
                 <div class="contact-item">
-                    <strong>Email:</strong> <a href="mailto:Horseluven@yahoo.com">Horseluven@yahoo.com</a> | 
-                    <a href="mailto:dannanlee14@gmail.com">dannanlee14@gmail.com</a>
+                    <strong>Email:</strong> <a href="/cdn-cgi/l/email-protection#8bc3e4f9f8eee7fefdeee5cbf2eae3e4e4a5e8e4e6"><span class="__cf_email__" data-cfemail="fab29588899f968f8c9f94ba839b929595d4999597">[email&#160;protected]</span></a> | 
+                    <a href="/cdn-cgi/l/email-protection#d8bcb9b6b6b9b6b4bdbde9ec98bfb5b9b1b4f6bbb7b5"><span class="__cf_email__" data-cfemail="1074717e7e717e7c7575212450777d71797c3e737f7d">[email&#160;protected]</span></a>
                 </div>
                 <a href="#" class="btn-primary">Entry Form (Coming Soon)</a>
             </div>
@@ -435,7 +118,7 @@
                     <strong>Phone:</strong> <a href="tel:9258271016">(925) 827-1016</a>
                 </div>
                 <div class="contact-item">
-                    <strong>Email:</strong> <a href="mailto:ms_ebaker@yahoo.com">ms_ebaker@yahoo.com</a>
+                    <strong>Email:</strong> <a href="/cdn-cgi/l/email-protection#dcb1af83b9bebdb7b9ae9ca5bdb4b3b3f2bfb3b1"><span class="__cf_email__" data-cfemail="731e002c161112181601330a121b1c1c5d101c1e">[email&#160;protected]</span></a>
                 </div>
                 <a href="#" class="btn-primary">Entry Form (Coming Soon)</a>
             </div>
@@ -474,8 +157,8 @@
                     <strong>Phone:</strong> <a href="tel:7072173582">(707) 217-3582</a> / <a href="tel:9258271016">(925) 827-1016</a>
                 </div>
                 <div class="contact-item">
-                    <strong>Email:</strong> <a href="mailto:wolves1961@sbcglobal.net">wolves1961@sbcglobal.net</a> | 
-                    <a href="mailto:ms_ebaker@yahoo.com">ms_ebaker@yahoo.com</a>
+                    <strong>Email:</strong> <a href="/cdn-cgi/l/email-protection#1e697172687b6d2f27282f5e6d7c7d7972717c7f7230707b6a"><span class="__cf_email__" data-cfemail="f681999a809385c7cfc0c7b6859495919a9994979ad8989382">[email&#160;protected]</span></a> | 
+                    <a href="/cdn-cgi/l/email-protection#fb9688a49e999a909e89bb829a939494d5989496"><span class="__cf_email__" data-cfemail="19746a467c7b78727c6b596078717676377a7674">[email&#160;protected]</span></a>
                 </div>
                 <a href="#" class="btn-primary">Entry Form (Coming Soon)</a>
             </div>
@@ -514,8 +197,8 @@
                     <strong>Phone:</strong> <a href="tel:7077439973">(707) 743-9973</a> / <a href="tel:7072173582">(707) 217-3582</a>
                 </div>
                 <div class="contact-item">
-                    <strong>Email:</strong> <a href="mailto:angie.whitedogranch@gmail.com">angie.whitedogranch@gmail.com</a> | 
-                    <a href="mailto:wolves1961@sbcglobal.net">wolves1961@sbcglobal.net</a>
+                    <strong>Email:</strong> <a href="/cdn-cgi/l/email-protection#264748414f4308514e4f5243424941544748454e66414b474f4a0845494b"><span class="__cf_email__" data-cfemail="1d7c737a7478336a7574697879727a6f7c737e755d7a707c7471337e7270">[email&#160;protected]</span></a> | 
+                    <a href="/cdn-cgi/l/email-protection#7e091112081b0d4f47484f3e0d1c1d1912111c1f1250101b0a"><span class="__cf_email__" data-cfemail="ea9d85869c8f99dbd3dcdbaa9988898d8685888b86c4848f9e">[email&#160;protected]</span></a>
                 </div>
                 <a href="#" class="btn-primary">Entry Form (Coming Soon)</a>
             </div>
@@ -554,8 +237,8 @@
                     <strong>Phone:</strong> <a href="tel:7075305990">(707) 530-5990</a> / <a href="tel:7079233097">(707) 923-3097</a>
                 </div>
                 <div class="contact-item">
-                    <strong>Email:</strong> <a href="mailto:whitney.braito@gmail.com">whitney.braito@gmail.com</a> | 
-                    <a href="mailto:rdrech59@gmail.com">rdrech59@gmail.com</a>
+                    <strong>Email:</strong> <a href="/cdn-cgi/l/email-protection#1e6976776a707b67307c6c7f776a715e79737f7772307d7173"><span class="__cf_email__" data-cfemail="cfb8a7a6bba1aab6e1adbdaea6bba08fa8a2aea6a3e1aca0a2">[email&#160;protected]</span></a> | 
+                    <a href="/cdn-cgi/l/email-protection#61130513040209545821060c00080d4f020e0c"><span class="__cf_email__" data-cfemail="b1c3d5c3d4d2d98488f1d6dcd0d8dd9fd2dedc">[email&#160;protected]</span></a>
                 </div>
                 <a href="#" class="btn-primary">Entry Form (Coming Soon)</a>
             </div>
@@ -594,44 +277,5 @@
                     <strong>Phone:</strong> <a href="tel:9166905390">(916) 690-5390</a> / <a href="tel:5107081439">(510) 708-1439</a>
                 </div>
                 <div class="contact-item">
-                    <strong>Email:</strong> <a href="mailto:empilothill@gmail.com">empilothill@gmail.com</a> | 
-                    <a href="mailto:linda.thomason0610@gmail.com">linda.thomason0610@gmail.com</a>
-                </div>
-                <a href="#" class="btn-primary">Entry Form (Coming Soon)</a>
-            </div>
-        </div>
-
-        <div class="info-box">
-            <h3>📋 Need More Information?</h3>
-            <p>Entry forms will be posted as they become available. Check back regularly or join our <a href="https://www.facebook.com/groups/1561086454144630/" style="color: #2554C7;">Facebook discussion group</a> for updates!</p>
-            <p style="margin-top: 0.5rem;">New to NATRC? Check out our <a href="stories-articles.html" style="color: #2554C7;">New Riders section</a> for tips and information.</p>
-        </div>
-    </main>
-
-    <footer>
-        <p>&copy; 2026 NATRC Region 1 | <a href="natrc-region1-mobile.html">Home</a> | <a href="contact.html">Contact</a></p>
-    </footer>
-
-    <script>
-        function toggleMenu() {
-            const nav = document.getElementById('mainNav');
-            nav.classList.toggle('active');
-        }
-
-        document.addEventListener('click', function(event) {
-            const nav = document.getElementById('mainNav');
-            const toggle = document.querySelector('.menu-toggle');
-            
-            if (!nav.contains(event.target) && !toggle.contains(event.target)) {
-                nav.classList.remove('active');
-            }
-        });
-
-        window.addEventListener('resize', function() {
-            if (window.innerWidth > 768) {
-                document.getElementById('mainNav').classList.remove('active');
-            }
-        });
-    </script>
-</body>
-</html>
+                    <strong>Email:</strong> <a href="/cdn-cgi/l/email-protection#254048554c494a514d4c4949654248444c490b464a48"><span class="__cf_email__" data-cfemail="284d45584144475c40414444684f45494144064b4745">[email&#160;protected]</span></a> | 
+                    <a href="/cdn-cgi/l/email-protection#315d585f55501f45595e5c50425e5f0107000171565c50585d1f525e5c"><span class="__cf_email__" data-cfemail="ddb1b4b3b9bcf3a9b5b2b0bcaeb2b3edebeced9dbab0bcb4b1f3beb2b0">[email&#160;protected]</span></a
