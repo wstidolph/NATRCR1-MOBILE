@@ -27,11 +27,11 @@ jobs:
     - name: Deploy with rsync over SSH
       uses: appleboy/scp-action@v1 # Use a community action for SSH deployment
       with:
-        host: nr1m.stidolph.com # pdx1-shared-a4-04.dreamhost.com
+        host: nrm1.stidolph.com # pdx1-shared-a4-04.dreamhost.com
         username: dh_nrm1 # dreamhost shell username
         key: ${{ secrets.SSH_PRIVATE_KEY_NATRC1 }} # The GitHub secret containing the private key
         source: "./*" # The source directory in the GitHub repository
-        target: "~/nr1m.stidolph.com/" # The target directory on DreamHost
+        target: "~/nrm1.stidolph.com/" # The target directory on DreamHost
         # script: rsync -avz --delete $GITHUB_WORKSPACE/ dh_nrm1@pdx1-shared-a4-04.dreamhost.com:~/nr1m.stidolph.com/
         # Alternative rsync using the action's built-in functionality
         # script: |
