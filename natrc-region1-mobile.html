@@ -1,163 +1,244 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NATRC Region 1 - Come Ride With Us!</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="css/home.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="css/home.css" />
+  </head>
+  <body>
     <header>
-        <div class="header-content">
-            <div class="logo">
-                <h1>NATRC Region 1</h1>
-                <p>Northern California • Oregon • Washington • Idaho • BC • Alaska • Nevada</p>
-            </div>
-            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle menu">☰</button>
-            <nav id="mainNav">
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#schedule">Ride Schedule</a></li>
-                    <li><a href="#stories">Stories & Articles</a></li>
-                    <li><a href="#judges">Judge's Corner</a></li>
-                    <li><a href="#gallery">Gallery</a></li>
-                    <li><a href="#links">Links</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+      <div class="header-content">
+        <div class="logo">
+          <h1>NATRC Region 1</h1>
+          <p>
+            Northern California • Oregon • Washington • Idaho • BC • Alaska •
+            Nevada
+          </p>
         </div>
+        <button
+          class="menu-toggle"
+          onclick="toggleMenu()"
+          aria-label="Toggle menu"
+        >
+          ☰
+        </button>
+        <nav id="mainNav">
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#schedule">Ride Schedule</a></li>
+            <li><a href="#stories">Stories & Articles</a></li>
+            <li><a href="#judges">Judge's Corner</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#links">Links</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <main>
-        <div class="alert">
-            <h3>📅 2026 Region 1 Convention - March 21st!</h3>
-            <p>Join us at Granite Bay for year-end awards and inspiring speakers including Adrienne Hendricks (professional saddle maker) and Angie Meroshnekoff (40+ years NATRC experience). <a href="#">Download entry form →</a></p>
+      <div class="alert">
+        <h3>📅 2026 Region 1 Convention - March 21st!</h3>
+        <p>
+          Join us at Granite Bay for year-end awards and inspiring speakers
+          including Adrienne Hendricks (professional saddle maker) and Angie
+          Meroshnekoff (40+ years NATRC experience).
+          <a href="#">Download entry form →</a>
+        </p>
+      </div>
+
+      <section class="hero" id="home">
+        <h2>Welcome to NATRC Region 1</h2>
+        <img
+          src="placeholder-hero-image.jpg"
+          alt="Trail riding in beautiful Region 1 territory"
+          loading="lazy"
+        />
+        <p>
+          NATRC Region 1 consists of Northern California, Oregon, Washington,
+          Idaho, British Columbia, Alaska and part of Nevada. If you love trail
+          riding and want to meet people who share your passion - come join us!
+        </p>
+      </section>
+
+      <section class="section">
+        <h3>📰 The Leadline Newsletter</h3>
+        <p>
+          Our Region 1 newsletter is e-published 3-4 times a year with breaking
+          news, new rides, ride dates, and more. Huge thanks to our editor Jo
+          Schliesman for keeping us connected!
+        </p>
+        <p><a href="#" class="btn">Read Latest Leadline (Spring 2025) →</a></p>
+        <p>
+          Send your stories and photos to
+          <a href="mailto:R1leadline@gmail.com">R1leadline@gmail.com</a>
+        </p>
+      </section>
+
+      <section class="section">
+        <h3>🎓 Catherine de la Cruz Scholarship</h3>
+        <p>
+          An annual scholarship for junior riders, sponsored by Brian & Darlene
+          Schlerf and BAS Roofing, honoring Catherine de la Cruz - who started
+          competing at age 75 and continues to inspire us all!
+        </p>
+        <p>
+          Catherine rode hunter-jumpers as a kid, took a break for marriage and
+          motherhood, then at 71 climbed back on a horse. At 75, she and her
+          horse Lola competed in their first NATRC ride, which they finished,
+          then won their next ride!
+        </p>
+        <p><a href="#" class="btn">Scholarship Details →</a></p>
+      </section>
+
+      <div class="news-grid">
+        <div class="news-card">
+          <h4>🏆 2025 Year End Awards</h4>
+          <p>
+            Check out our 2025 year-end standings! Awards will be celebrated at
+            the Mini-Convention on March 21st.
+          </p>
+          <a href="#">View Awards →</a>
         </div>
 
-        <section class="hero" id="home">
-            <h2>Welcome to NATRC Region 1</h2>
-            <img src="placeholder-hero-image.jpg" alt="Trail riding in beautiful Region 1 territory" loading="lazy">
-            <p>NATRC Region 1 consists of Northern California, Oregon, Washington, Idaho, British Columbia, Alaska and part of Nevada. If you love trail riding and want to meet people who share your passion - come join us!</p>
-        </section>
-
-        <section class="section">
-            <h3>📰 The Leadline Newsletter</h3>
-            <p>Our Region 1 newsletter is e-published 3-4 times a year with breaking news, new rides, ride dates, and more. Huge thanks to our editor Jo Schliesman for keeping us connected!</p>
-            <p><a href="#" class="btn">Read Latest Leadline (Spring 2025) →</a></p>
-            <p>Send your stories and photos to <a href="/cdn-cgi/l/email-protection#6d3f5c01080c09010403082d0a000c0401430e0200"><span class="__cf_email__" data-cfemail="3c6e0d50595d58505552597c5b515d5550125f5351">[email&#160;protected]</span></a></p>
-        </section>
-
-        <section class="section">
-            <h3>🎓 Catherine de la Cruz Scholarship</h3>
-            <p>An annual scholarship for junior riders, sponsored by Brian & Darlene Schlerf and BAS Roofing, honoring Catherine de la Cruz - who started competing at age 75 and continues to inspire us all!</p>
-            <p>Catherine rode hunter-jumpers as a kid, took a break for marriage and motherhood, then at 71 climbed back on a horse. At 75, she and her horse Lola competed in their first NATRC ride, which they finished, then won their next ride!</p>
-            <p><a href="#" class="btn">Scholarship Details →</a></p>
-        </section>
-
-        <div class="news-grid">
-            <div class="news-card">
-                <h4>🏆 2025 Year End Awards</h4>
-                <p>Check out our 2025 year-end standings! Awards will be celebrated at the Mini-Convention on March 21st.</p>
-                <a href="#">View Awards →</a>
-            </div>
-
-            <div class="news-card">
-                <h4>📅 2026 Ride Schedule</h4>
-                <p>Tentative dates are available for the 2026 season. Put them on your calendar and watch for more details!</p>
-                <a href="#">View Schedule →</a>
-            </div>
-
-            <div class="news-card">
-                <h4>📖 FREE Cookbook!</h4>
-                <p>Carol Ormond found a Region 1 Cookbook with NATRC info, cooking tips, and actual recipes. Download your copy!</p>
-                <a href="#">Download Cookbook →</a>
-            </div>
-
-            <div class="news-card">
-                <h4>💭 Remembrance Page</h4>
-                <p>Honoring cherished riders we've lost - reminders of the examples they set for horsemanship and community.</p>
-                <a href="#">Visit Page →</a>
-            </div>
-
-            <div class="news-card">
-                <h4>🔥 Fire Safety Articles</h4>
-                <p>Nancy Kasovich's article on surviving two fires plus Linda Thomason's barn fire prevention tips.</p>
-                <a href="#">Read Articles →</a>
-            </div>
-
-            <div class="news-card">
-                <h4>🎥 NATRC Webinars</h4>
-                <p>Check out past webinars on conditioning, judging, and all aspects of our sport on the national site.</p>
-                <a href="#">Watch Webinars →</a>
-            </div>
+        <div class="news-card">
+          <h4>📅 2026 Ride Schedule</h4>
+          <p>
+            Tentative dates are available for the 2026 season. Put them on your
+            calendar and watch for more details!
+          </p>
+          <a href="#">View Schedule →</a>
         </div>
 
-        <div class="cta">
-            <h2>🐴 Come Ride With Us!</h2>
-            <p style="margin-bottom: 1.5rem;">Join our community of passionate trail riders. Whether you're new to NATRC or a seasoned competitor, we'd love to have you!</p>
-            <a href="#" class="btn">Join NATRC</a>
-            <a href="#" class="btn">View Ride Schedule</a>
-            <a href="#" class="btn">New Rider Info</a>
+        <div class="news-card">
+          <h4>📖 FREE Cookbook!</h4>
+          <p>
+            Carol Ormond found a Region 1 Cookbook with NATRC info, cooking
+            tips, and actual recipes. Download your copy!
+          </p>
+          <a href="#">Download Cookbook →</a>
         </div>
 
-        <section class="section">
-            <h3>🔗 Connect With Us</h3>
-            <p><strong>Facebook Page:</strong> <a href="https://www.facebook.com/NATRC-Region-1-274405955918430/">NATRC Region 1</a></p>
-            <p><strong>Discussion Group:</strong> <a href="https://www.facebook.com/groups/1561086454144630/">Region 1 CTR Discussion Group</a> - Wide-ranging conversations from newbies to old hands!</p>
-        </section>
+        <div class="news-card">
+          <h4>💭 Remembrance Page</h4>
+          <p>
+            Honoring cherished riders we've lost - reminders of the examples
+            they set for horsemanship and community.
+          </p>
+          <a href="#">Visit Page →</a>
+        </div>
+
+        <div class="news-card">
+          <h4>🔥 Fire Safety Articles</h4>
+          <p>
+            Nancy Kasovich's article on surviving two fires plus Linda
+            Thomason's barn fire prevention tips.
+          </p>
+          <a href="#">Read Articles →</a>
+        </div>
+
+        <div class="news-card">
+          <h4>🎥 NATRC Webinars</h4>
+          <p>
+            Check out past webinars on conditioning, judging, and all aspects of
+            our sport on the national site.
+          </p>
+          <a href="#">Watch Webinars →</a>
+        </div>
+      </div>
+
+      <div class="cta">
+        <h2>🐴 Come Ride With Us!</h2>
+        <p style="margin-bottom: 1.5rem">
+          Join our community of passionate trail riders. Whether you're new to
+          NATRC or a seasoned competitor, we'd love to have you!
+        </p>
+        <a href="#" class="btn">Join NATRC</a>
+        <a href="#" class="btn">View Ride Schedule</a>
+        <a href="#" class="btn">New Rider Info</a>
+      </div>
+
+      <section class="section">
+        <h3>🔗 Connect With Us</h3>
+        <p>
+          <strong>Facebook Page:</strong>
+          <a href="https://www.facebook.com/NATRC-Region-1-274405955918430/"
+            >NATRC Region 1</a
+          >
+        </p>
+        <p>
+          <strong>Discussion Group:</strong>
+          <a href="https://www.facebook.com/groups/1561086454144630/"
+            >Region 1 CTR Discussion Group</a
+          >
+          - Wide-ranging conversations from newbies to old hands!
+        </p>
+      </section>
     </main>
 
     <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h4>Quick Links</h4>
-                <a href="#">Home</a>
-                <a href="#">Ride Schedule</a>
-                <a href="#">Stories & Articles</a>
-                <a href="#">Judge's Corner</a>
-            </div>
-            <div class="footer-section">
-                <h4>Resources</h4>
-                <a href="#">Gallery</a>
-                <a href="#">Links</a>
-                <a href="#">Contact</a>
-                <a href="#">Membership Form</a>
-            </div>
-            <div class="footer-section">
-                <h4>New Riders</h4>
-                <a href="#">First Time Rider Tips</a>
-                <a href="#">FAQ</a>
-                <a href="#">Rule Book</a>
-                <a href="#">First Ride Stories</a>
-            </div>
-            <div class="footer-section">
-                <h4>Stay Connected</h4>
-                <a href="#">Facebook</a>
-                <a href="#">Newsletter Archive</a>
-                <a href="#">NATRC National</a>
-                <a href="#">Contact Us</a>
-            </div>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <a href="#">Home</a>
+          <a href="#">Ride Schedule</a>
+          <a href="#">Stories & Articles</a>
+          <a href="#">Judge's Corner</a>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 NATRC Region 1. All rights reserved. | <em>Come Ride With Us!</em></p>
+        <div class="footer-section">
+          <h4>Resources</h4>
+          <a href="#">Gallery</a>
+          <a href="#">Links</a>
+          <a href="#">Contact</a>
+          <a href="#">Membership Form</a>
         </div>
+        <div class="footer-section">
+          <h4>New Riders</h4>
+          <a href="#">First Time Rider Tips</a>
+          <a href="#">FAQ</a>
+          <a href="#">Rule Book</a>
+          <a href="#">First Ride Stories</a>
+        </div>
+        <div class="footer-section">
+          <h4>Stay Connected</h4>
+          <a href="#">Facebook</a>
+          <a href="#">Newsletter Archive</a>
+          <a href="#">NATRC National</a>
+          <a href="#">Contact Us</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          &copy; 2026 NATRC Region 1. All rights reserved. |
+          <em>Come Ride With Us!</em>
+        </p>
+      </div>
     </footer>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-        function toggleMenu() {
-            const nav = document.getElementById('mainNav');
-            nav.classList.toggle('active');
+    <script>
+      function toggleMenu() {
+        const nav = document.getElementById("mainNav");
+        nav.classList.toggle("active");
+      }
+
+      // Close menu when clicking outside
+      document.addEventListener("click", function (event) {
+        const nav = document.getElementById("mainNav");
+        const toggle = document.querySelector(".menu-toggle");
+
+        if (!nav.contains(event.target) && !toggle.contains(event.target)) {
+          nav.classList.remove("active");
         }
+      });
 
-        // Close menu when clicking outside
-        document.addEventListener('click', function(event) {
-            const nav = document.getElementById('mainNav');
-            const toggle = document.querySelector('.menu-toggle');
-            
-            if (!nav.contains(event.target) && !toggle.contains(event.target)) {
-                nav.classList.remove('active');
-            }
-        });
-
-        // Close menu when window is resized
+      // Close menu when window is resized to desktop
+      window.addEventListener("resize", function () {
+        if (window.innerWidth > 768) {
+          document.getElementById("mainNav").classList.remove("active");
+        }
+      });
+    </script>
+  </body>
+</html>
