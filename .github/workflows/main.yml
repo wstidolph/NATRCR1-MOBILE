@@ -30,8 +30,8 @@ jobs:
         host: pdx1-shared-a4-04.dreamhost.com
         username: dh_nr1m # dreamhost shell username
         key: ${{ secrets.SSH_PRIVATE_KEY_NATRC1 }} # The GitHub secret containing the private key
-        target: /home/dh_nrm1/nr1m.stidolph.com # The target directory on DreamHost
-        script: rsync -avz --delete $GITHUB_WORKSPACE/ dh_nrm1@pdx1-shared-a4-04.dreamhost.com:/home/dh_nr1m/nr1m.stidolph.com/
+        target: "/home/dh_nrm1/nr1m.stidolph.com" # The target directory on DreamHost
+        script: rsync -avz --delete $GITHUB_WORKSPACE/ dh_nrm1@pdx1-shared-a4-04.dreamhost.com:~/nr1m.stidolph.com/
         # Alternative rsync using the action's built-in functionality
         # script: |
         #   rsync -avz --delete --exclude='.git/' ./* /home/your_dreamhost_username/your_website_directory/
