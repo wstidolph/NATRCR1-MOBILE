@@ -29,7 +29,7 @@
         </div>
     </header>
 
-    <main>
+     <main>
         <div class="page-header">
             <h1>📚 Stories & Articles</h1>
             <p>Learn from experienced riders, get inspired, and prepare for your first (or next!) ride</p>
@@ -248,7 +248,7 @@
             <div class="highlight-box">
                 <h3>Contribute to the Leadline!</h3>
                 <p>We'd love to feature your ride stories, photos, training tips, or horse care advice in upcoming issues.</p>
-                <p style="margin-top: 0.5rem;">Send submissions to: <a href="/cdn-cgi/l/email-protection#a8fa99c4cdc9ccc4c1c6cde8cfc5c9c1c486cbc7c5" style="color: #2554C7; font-weight: 600;"><span class="__cf_email__" data-cfemail="ecbedd80898d8880858289ac8b818d8580c28f8381">[email&#160;protected]</span></a></p>
+                <p style="margin-top: 0.5rem;">Send submissions to: <a href="mailto:R1leadline@gmail.com" style="color: #2554C7; font-weight: 600;">R1leadline@gmail.com</a></p>
             </div>
         </section>
 
@@ -279,7 +279,7 @@
         <p>&copy; 2026 NATRC Region 1 | <a href="natrc-region1-mobile.html">Home</a> | <a href="contact.html">Contact</a></p>
     </footer>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    <script>
         function toggleMenu() {
             const nav = document.getElementById('mainNav');
             nav.classList.toggle('active');
@@ -292,4 +292,13 @@
             if (!nav.contains(event.target) && !toggle.contains(event.target)) {
                 nav.classList.remove('active');
             }
- 
+        });
+
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768) {
+                document.getElementById('mainNav').classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>

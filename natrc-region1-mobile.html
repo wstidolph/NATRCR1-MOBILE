@@ -29,7 +29,7 @@
         </div>
     </header>
 
-    <main>
+   <main>
         <div class="alert">
             <h3>📅 2026 Region 1 Convention - March 21st!</h3>
             <p>Join us at Granite Bay for year-end awards and inspiring speakers including Adrienne Hendricks (professional saddle maker) and Angie Meroshnekoff (40+ years NATRC experience). <a href="#">Download entry form →</a></p>
@@ -45,7 +45,7 @@
             <h3>📰 The Leadline Newsletter</h3>
             <p>Our Region 1 newsletter is e-published 3-4 times a year with breaking news, new rides, ride dates, and more. Huge thanks to our editor Jo Schliesman for keeping us connected!</p>
             <p><a href="#" class="btn">Read Latest Leadline (Spring 2025) →</a></p>
-            <p>Send your stories and photos to <a href="/cdn-cgi/l/email-protection#6d3f5c01080c09010403082d0a000c0401430e0200"><span class="__cf_email__" data-cfemail="3c6e0d50595d58505552597c5b515d5550125f5351">[email&#160;protected]</span></a></p>
+            <p>Send your stories and photos to <a href="mailto:R1leadline@gmail.com">R1leadline@gmail.com</a></p>
         </section>
 
         <section class="section">
@@ -144,7 +144,7 @@
         </div>
     </footer>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    <script>
         function toggleMenu() {
             const nav = document.getElementById('mainNav');
             nav.classList.toggle('active');
@@ -160,4 +160,12 @@
             }
         });
 
-        // Close menu when window is resized
+        // Close menu when window is resized to desktop
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768) {
+                document.getElementById('mainNav').classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
