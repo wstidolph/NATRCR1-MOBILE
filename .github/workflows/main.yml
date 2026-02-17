@@ -1,0 +1,37 @@
+name: Deploy to DreamHost
+
+on:
+  push:
+    branches:
+      - main # Trigger on pushes to the main branch
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4 # Action to check out your repository
+
+    # Optional: Add steps here to build app if needed (e.g., npm install, npm run build)
+    # but this website isn't an app! (no build process at this time)
+    # - name: Setup Node.js
+    #   uses: actions/setup-node@v4
+    #   with:
+    #     node-version: '20'
+    # - name: Install dependencies
+    #   run: npm install
+    # - name: Build project
+    #   run: npm run build
+
+    - name: Deploy with rsync over SSH
+      uses: appleboy/ssh-action@v1.0.3 # Use a community action for SSH deployment
+      with:
+        host: pdx1-shared-a4-04.dreamhost.com
+        username: dh_nr1m # dreamhost shell username
+        key: ${{ secrets.SSH_PRIVATE_KEY_NATRC1 }} # The GitHub secret containing the private key
+        target: /home/dh_nrm1/nr1m.stidolph.com # The target directory on DreamHost
+        script: rsync -avz --delete $GITHUB_WORKSPACE/ dh_nrm1@pdx1-shared-a4-04.dreamhost.com:/home/dh_nr1m/nr1m.stidolph.com/
+        # Alternative rsync using the action's built-in functionality
+        # script: |
+        #   rsync -avz --delete --exclude='.git/' ./* /home/your_dreamhost_username/your_website_directory/
