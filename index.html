@@ -50,16 +50,23 @@
       </div>
 
       <section class="hero" id="home">
-        <h2>Welcome to NATRC Region 1</h2>
-        <img
-          src="placeholder-hero-image.jpg"
-          alt="Trail riding in beautiful Region 1 territory"
-          loading="lazy"
-        />
-        <p>
-          NATRC Region 1 consists of Northern California, Oregon, Washington,
-          Idaho, British Columbia, Alaska and part of Nevada. If you love trail
-          riding and want to meet people who share your passion - come join us!
+        <picture>
+          <source
+            srcset="/images/masthead_region_1a.gif"
+            media="(max-width: 720px)"
+          />
+          <source
+            srcset="/images/masthead_1024_extended.png"
+            media="(min-width: 721px)"
+          />
+          <img
+            src="/images/masthead_1024_extended.png"
+            alt="NATRC Region 1 Logo"
+            loading="lazy"
+          />
+        </picture>
+        <p class="hero-text">
+          Welcome to NATRC Region 1! If you love trail riding and want to meet people who share your passion - come join us!
         </p>
       </section>
 
