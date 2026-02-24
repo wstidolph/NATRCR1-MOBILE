@@ -1,0 +1,7 @@
+{
+  "claudeCodeChat.wsl.claudePath": "/home/wstidolph/.local/bin/claude",
+  "claudeCodeChat.wsl.distro": "default",
+  "claudeCodeChat.wsl.enabled": true,
+  "claudeCodeChat.wsl.nodePath": "/home/wstidolph/.nvm/versions/node/v24.13.1/bin/node",
+  "claudeCodeChat.permissions.yoloMode": true
+}
