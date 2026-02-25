@@ -179,3 +179,15 @@ footer a {
         padding: 0.75rem;
     }
 }
+/* Highlight classes for link testing */
+.card-not-found {
+    outline: 4px solid red !important;
+    position: relative;
+    z-index: 10;
+}
+
+.card-questionable {
+    outline: 4px solid #ffc107 !important; /* Bold yellow/amber */
+    position: relative;
+    z-index: 10;
+}
