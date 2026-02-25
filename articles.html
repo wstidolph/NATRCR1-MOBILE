@@ -320,6 +320,8 @@
           if (hash.startsWith('#section-')) {
             const sectionId = hash.substring(1);
             showSection(sectionId);
+          } else {
+            showSection(null);
           }
         }
       }
