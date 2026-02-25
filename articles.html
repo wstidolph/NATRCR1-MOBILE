@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Articles - NATRC Region 1</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="css/article.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-content">
+        <div class="logo">
+          <h1>NATRC Region 1</h1>
+          <p>Resource Articles</p>
+        </div>
+        <button
+          class="menu-toggle"
+          onclick="toggleMenu()"
+          aria-label="Toggle menu"
+        >
+          ☰
+        </button>
+        <nav id="mainNav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="ride-schedule.html">Ride Schedule</a></li>
+            <li><a href="stories-articles.html">Stories & Articles</a></li>
+            <li><a href="judges-corner.html">Judge's Corner</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="links.html">Links</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="articles-layout">
+      <!-- Collection Mode -->
+      <div id="collection-view">
+        <div class="page-header">
+          <h1>📖 Article Collection</h1>
+          <p>
+            Explore our curated library of education, stories, and archives for
+            the competitive trail rider.
+          </p>
+        </div>
+
+        <div class="accordion">
+          <!-- Section 1: New Riders -->
+          <div class="accordion-item" id="section-essentials">
+            <div class="accordion-header" onclick="toggleSection('section-essentials')">
+              <h2><span>🌱</span> New Rider Essentials</h2>
+              <span class="accordion-icon">▼</span>
+            </div>
+            <div class="accordion-content">
+              <div class="section-body">
+                <p class="section-intro">
+                  Everything you need to know before your first ride, from
+                  checklists to explaining how judging works.
+                </p>
+                <div class="article-list">
+                  <div class="article-card">
+                    <h4>Day in the Life of a Ride</h4>
+                    <p>A complete description of what happens from Friday arrival to Sunday checkout.</p>
+                    <a href="https://www.natrcregion1.org/Articles/ADayInTheLife.htm" class="article-link">Read Article →</a>
+                  </div>
+                  <div class="article-card">
+                    <h4>Ride Your Own Ride</h4>
+                    <p>Tips on staying focused on your own horse's needs rather than just following others.</p>
+                    <a href="https://www.natrcregion1.org/Articles/Ride_Your_Own_Ride.htm" class="article-link">Read Article →</a>
+                  </div>
+                  <div class="article-card">
+                    <h4>Frequently Asked Questions</h4>
+                    <p>Answers to common questions about camping, stabling, and competition rules.</p>
+                    <a href="https://www.natrcregion1.org/Articles/FAQ.htm" class="article-link">Read FAQ →</a>
+                  </div>
+                  <div class="article-card">
+                    <h4>Ride Checklist</h4>
+                    <p>An exhaustive list of gear and supplies you might need at an event.</p>
+                    <a href="https://www.natrcregion1.org/Articles/RIDE%20CHECKLIST.pdf" class="article-link">View PDF →</a>
+                  </div>
+                  <div class="article-card">
+                    <h4>NATRC 101</h4>
+                    <p>Introduction to the organization's philosophy and basic procedures.</p>
+                    <a href="https://www.natrcregion1.org/Articles/NATRC_101.htm" class="article-link">Read Article →</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Section 2: Education -->
+          <div class="accordion-item" id="section-education">
+            <div class="accordion-header" onclick="toggleSection('section-education')">
+              <h2><span>🧠</span> Education & Training</h2>
+              <span class="accordion-icon">▼</span>
+            </div>
+            <div class="accordion-content">
+              <div class="section-body">
+                <p class="section-intro">
+                  Improve your performance and horse care with expert advice on
+                  conditioning, movement, and judging.
+                </p>
+                <div class="article-list">
+                  <div class="article-card">
+                    <h4>Conditioning for Distance</h4>
+                    <p>Expert presentation by Jec Ballou on building fitness for the CTR horse.</p>
+                    <a href="https://www.natrcregion1.org/Articles/ConditioningDistanceHorse.pdf" class="article-link">View PDF →</a>
+                  </div>
+                  <div class="article-card">
+                    <h4>Rehab for Distance Horses</h4>
+                    <p>Jec Ballou's guide to managing injury recovery for athletic horses.</p>
+                    <a href="https://www.natrcregion1.org/Articles/RehabForHorses.pdf" class="article-link">View PDF →</a>
+                  </div>
+                  <div class="article-card">
+                    <h4>Judging Explained</h4>
+                    <p>A deep dive into how horsemanship points are allocated by officials.</p>
+                    <a href="https://www.natrcregion1.org/Articles/Judging_Explained.htm" class="article-link">Read Article →</a>
+                  </div>
+                  <div class="article-card">
+                    <h4>Dressage on the Trail</h4>
+                    <p>How arena skills translate to better balance and communication on the trail.</p>
+                    <a href="https://www.natrcregion1.org/Articles/DressageontheTrail.htm" class="article-link">Read Article →</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Section 3: Stories -->
+          <div class="accordion-item" id="section-stories">
+            <div class="accordion-header" onclick="toggleSection('section-stories')">
+              <h2><span>📖</span> Ride Stories & History</h2>
+              <span class="accordion-icon">▼</span>
+            </div>
+            <div class="accordion-content">
+              <div class="section-body">
+                <p class="section-intro">
+                  First-hand accounts of rides, historical perspectives, and
+                  tributes to our equine partners.
+                </p>
+                <div class="article-list">
+                  <div class="article-card">
+                    <h4>Conquering Mt. Diablo</h4>
+                    <p>Sheila Christiansen's account of her first ride at this legendary venue.</p>
+                    <a href="https://www.natrcregion1.org/Articles/Mt_Diablo_2014.htm" class="article-link">Read Story →</a>
+                  </div>
+                  <div class="article-card">
+                    <h4>Lily's Story</h4>
+                    <p>A moving account of loss and recovery on the endurance trail.</p>
+                    <a href="https://www.natrcregion1.org/Articles/Lilys_Story.htm" class="article-link">Read Story →</a>
+                  </div>
+                  <div class="article-card">
+                    <h4>History: The First 1941 Ride</h4>
+                    <p>Read about the inaugural Diablo Springs ride from Concord to the mountain.</p>
+                    <a href="https://www.natrcregion1.org/Articles/CMDTRA_story.htm" class="article-link">Read History →</a>
+                  </div>
+                  <div class="article-card">
+                    <h4>Confidence of a Manager</h4>
+                    <p>Behind-the-scenes "confessions" of a first-time ride manager.</p>
+                    <a href="https://www.natrcregion1.org/Articles/Confessions_of_a_First_Time_Ride_Manager.htm" class="article-link">Read Story →</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Section 4: Archives -->
+          <div class="accordion-item" id="section-archives">
+            <div class="accordion-header" onclick="toggleSection('section-archives')">
+              <h2><span>🗄️</span> Archives & News</h2>
+              <span class="accordion-icon">▼</span>
+            </div>
+            <div class="accordion-content">
+              <div class="section-body">
+                <p class="section-intro">
+                  Access decades of regional newsletters and official
+                  organizational documents.
+                </p>
+                <div class="article-list">
+                  <div class="article-card">
+                    <h4>Leadline Archive</h4>
+                    <p>Access past editions of the Region 1 newsletter from 2007 to present.</p>
+                    <a href="https://www.natrcregion1.org/newRiders/newRiders.htm#leadline" class="article-link">Main Archive →</a>
+                  </div>
+                  <div class="article-card">
+                    <h4>NATRC Rule Book</h4>
+                    <p>The current official guidelines for all competitive trail competitions.</p>
+                    <a href="https://www.natrcregion1.org/Articles/Rule_Book_2023.pdf" class="article-link">View PDF →</a>
+                  </div>
+                  <div class="article-card">
+                    <h4>Region 1 Bylaws</h4>
+                    <p>Official governance documents for the Region 1 organization.</p>
+                    <a href="https://www.natrcregion1.org/Articles/R1_Bylaws_080316.pdf" class="article-link">View PDF →</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Section 5: Culture -->
+          <div class="accordion-item" id="section-culture">
+            <div class="accordion-header" onclick="toggleSection('section-culture')">
+              <h2><span>🧁</span> Community & Fun</h2>
+              <span class="accordion-icon">▼</span>
+            </div>
+            <div class="accordion-content">
+              <div class="section-body">
+                <p class="section-intro">
+                  The social side of NATRC - from culinary traditions to safety
+                  tips for your barn.
+                </p>
+                <div class="article-list">
+                  <div class="article-card">
+                    <h4>NATRC Cookbook</h4>
+                    <p>A beloved collection of recipes and tips from Region 1 members.</p>
+                    <a href="https://www.natrcregion1.org/Articles/NATRC_Cookbook.pdf" class="article-link">Open Cookbook →</a>
+                  </div>
+                  <div class="article-card">
+                    <h4>Barn Fire Prevention</h4>
+                    <p>Critical safety checklist and advice for protecting your facility.</p>
+                    <a href="https://www.natrcregion1.org/Articles/BarnFirePrevention.pdf" class="article-link">View PDF →</a>
+                  </div>
+                  <div class="article-card">
+                    <h4>Jewel on the Trail</h4>
+                    <p>One of the unexpected joys of marking trail for our rides.</p>
+                    <a href="https://www.natrcregion1.org/Articles/jewel_on_the_trail.htm" class="article-link">Read Article →</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Reader Mode -->
+      <div id="reader-view" class="reader-mode">
+        <div class="reader-header">
+          <button class="back-btn" onclick="goBack()">
+            <span>←</span> Back to Collection
+          </button>
+          <h3 id="reader-title">Article Reader</h3>
+        </div>
+        <iframe id="article-iframe" title="Article Content"></iframe>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <a href="index.html">Home</a>
+          <a href="ride-schedule.html">Ride Schedule</a>
+          <a href="articles.html">Articles</a>
+          <a href="stories-articles.html">Stories & Articles</a>
+        </div>
+        <div class="footer-section">
+          <h4>Resources</h4>
+          <a href="judges-corner.html">Judge's Corner</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="links.html">Links</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-section">
+          <h4>New Riders</h4>
+          <a href="articles.html#section-essentials">Getting Started</a>
+          <a href="https://www.natrcregion1.org/Articles/FAQ.htm">FAQ</a>
+          <a href="https://www.natrcregion1.org/Articles/Rule_Book_2023.pdf">Rule Book</a>
+          <a href="articles.html#section-stories">First Ride Stories</a>
+        </div>
+        <div class="footer-section">
+          <h4>Stay Connected</h4>
+          <a href="https://www.facebook.com/NATRC-Region-1-274405955918430/">Facebook</a>
+          <a href="articles.html#section-archives">Newsletter Archive</a>
+          <a href="https://www.natrc.org/">NATRC National</a>
+          <a href="contact.html">Contact Us</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          &copy; 2026 NATRC Region 1. All rights reserved. |
+          <em>Come Ride With Us!</em>
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      function toggleMenu() {
+        const nav = document.getElementById("mainNav");
+        nav.classList.toggle("active");
+      }
+
+      // Mode management
+      function updateView() {
+        const hash = window.location.hash;
+        const collectionView = document.getElementById('collection-view');
+        const readerView = document.getElementById('reader-view');
+        
+        if (hash.startsWith('#view-')) {
+          const url = decodeURIComponent(hash.substring(6));
+          collectionView.style.display = 'none';
+          readerView.style.display = 'flex';
+          document.getElementById('article-iframe').src = url;
+          // Find the title if possible
+          const links = document.querySelectorAll('.article-link');
+          let title = "Article";
+          links.forEach(l => {
+              if(l.href === url) {
+                  title = l.closest('.article-card').querySelector('h4').innerText;
+              }
+          });
+          document.getElementById('reader-title').innerText = title;
+        } else {
+          collectionView.style.display = 'block';
+          readerView.style.display = 'none';
+          document.getElementById('article-iframe').src = '';
+          
+          // Handle accordion state from hash
+          if (hash.startsWith('#section-')) {
+            const sectionId = hash.substring(1);
+            showSection(sectionId);
+          }
+        }
+      }
+
+      function toggleSection(sectionId) {
+        const item = document.getElementById(sectionId);
+        if (item.classList.contains('active')) {
+          window.location.hash = '';
+        } else {
+          window.location.hash = sectionId;
+        }
+      }
+
+      function showSection(sectionId) {
+        document.querySelectorAll('.accordion-item').forEach(item => {
+          if (item.id === sectionId) {
+            item.classList.add('active');
+          } else {
+            item.classList.remove('active');
+          }
+        });
+      }
+
+      function goBack() {
+        // If we were viewing an article, we want to go back to the section it came from
+        // The browser back button handles this automatically if we use hashes
+        window.history.back();
+      }
+
+      // Initial state and listener
+      window.addEventListener('hashchange', updateView);
+      window.addEventListener('DOMContentLoaded', () => {
+        // Intercept link clicks to articles
+        document.querySelectorAll('.article-link').forEach(link => {
+          link.addEventListener('click', (e) => {
+            // Only use reader mode for internal-ish articles, external blogs etc go separate
+            if (link.href.includes('natrcregion1.org') || link.href.endsWith('.pdf')) {
+               e.preventDefault();
+               window.location.hash = 'view-' + encodeURIComponent(link.href);
+            }
+          });
+        });
+        updateView();
+      });
+
+      // Navigation closing on click outside
+      document.addEventListener("click", function (event) {
+        const nav = document.getElementById("mainNav");
+        const toggle = document.querySelector(".menu-toggle");
+        if (!nav.contains(event.target) && !toggle.contains(event.target)) {
+          nav.classList.remove("active");
+        }
+      });
+    </script>
+  </body>
+</html>
